@@ -21,15 +21,17 @@ class Solution {
               j ++;
               continue;
           }
-          //add elements
+          //add elements in temp of a[] if i < j
           if(a[i] < b[j]){
               temp.add(a[i]);
               i ++;
           }
+          //add ele in temp if i > j of b[]
           else if(a[i] > b[j]){
               temp.add(b[j]);
               j ++;
           }
+          // else increment of i and j both 
           else {
               temp.add(a[i]);
               i ++;
@@ -45,6 +47,7 @@ class Solution {
            temp.add(a[i]);
            i ++;
        }
+       // for b[]
        while(j < m){
            if(j > 0 && b[j - 1] == b[j]){
                j ++;
